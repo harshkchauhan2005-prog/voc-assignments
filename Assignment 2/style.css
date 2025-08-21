@@ -1,0 +1,309 @@
+ @import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+      .wave{
+         margin: 0;
+        aspect-ratio: 960/540;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+       
+    }
+    .layer{
+        background-image: url(layered-waves-haikei.svg);
+        height: 200px;
+       
+    }
+
+
+    body{
+        margin: 0;
+
+       
+        
+    }
+    
+
+    h1{
+        margin: 0;
+        text-align: center;
+        justify-content: center;
+        padding: 10px;
+        font-family: "Sansation", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 65px;
+    }
+    .image{
+        
+        float: inline-end;
+        
+    }
+
+   
+    .about{
+        padding: 5px 8px 8px 16px;
+        margin: 137px 23px 88px 75px;
+        height: 300px;
+        width: 500px;
+        border: 0px solid;
+        border-radius: 15px;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        transition: transform 1.6s ease;
+       }
+          
+       .about:hover{
+            transform: scale(1.03);
+           
+       }
+       .about h3{
+             padding: 3px 7px 3px 0%;
+             width: 137px;
+             border: 0px solid;
+             border-radius: 8px;
+             font-family: "Funnel Sans", sans-serif;
+             font-optical-sizing: auto;
+             font-weight: 700;
+             font-style: normal;
+             
+            
+       }
+
+    .about p{
+             font-family: "Funnel Sans", sans-serif;
+             font-optical-sizing: auto;
+             font-weight: 300;
+             font-style: normal;
+    }
+
+   
+   
+      .Web {
+
+        
+           display: flex;
+           align-items: center;
+           gap: 20px;
+           padding: 20px;
+           
+            margin: 20px 340px 20px 100px;
+           background: #ffffff;
+          
+}
+
+.Web-image img{
+            width: 500px;
+           height: 500px;
+           object-fit: cover;
+           
+           
+}
+
+         .Web-image{
+              animation: fadeUp;
+           animation-timeline: view();
+            animation-range: entry 20% cover 40%;
+        }
+                   @keyframes fadeUp{
+        from{
+          opacity: 0;
+          transform: translateX(-250px)  scale(0.5);
+        }
+        to{
+            opacity: 1;
+            transform: translateX() scale(1.2);
+        }
+    }
+   
+
+     .Web-content {
+          flex: 1;
+        
+          
+       }
+        
+       
+              
+    .Web ul {
+              margin-left: 50px;
+              padding: 0;
+               list-style: none;
+               direction: rtl; 
+}
+
+.Web ul li {
+          font-size: 18px;
+            padding: 6px 0;
+            color: #555;
+             border-bottom: 1px dashed #ddd;
+              animation: fade;
+            animation-timeline: view();
+             animation-range: entry 20% cover 40%;
+}
+   
+    #title{
+           color: rgb(45, 45, 45);
+          text-align: end;
+          margin-left: 0;
+          margin-right: 0;
+          margin-bottom: 0;
+          width: 400px;
+
+          padding: 50px 0px 10px 290px;
+
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 800;
+         font-style: normal;
+         font-size: xx-large;   
+    }    
+       
+        #title {
+              animation: fade;
+            animation-timeline: view();
+             animation-range: entry 20% cover 40%;
+        }
+          @keyframes fade{
+
+            from{
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to{
+              opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+    .apply-btn {
+                   margin-left: 618px;
+                   padding: 8px 18px;
+                   font-size: 16px;
+                   font-weight: 600;
+                    color: #fff;
+                  background:rgb(244, 24, 40);;     
+                   border: none;
+                 border-radius: 6px;
+                  transition: 0.3s;
+}
+
+.apply-btn:hover {
+                   
+                   background-color: rgb(17, 215, 106);    
+                  transform: translateY(-2px);
+                  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+
+
+    .app {
+
+        
+           display: flex;
+           align-items: center;
+           gap: 75px;
+           padding: 20px;
+           
+            margin: 20px 340px 20px 100px;
+           background: #ffffff;
+          
+}
+
+.app-Image img {
+
+            width: 500px;
+           height: 400px;
+           object-fit: cover;
+         
+           
+          
+}
+.app-Image{
+             animation: fadeup;
+        animation-timeline: view();
+        animation-range: entry 20% cover 40%;
+}
+
+          @keyframes fadeup{
+        from{
+          opacity: 0;
+          transform: translateX(250px) scale(0.5);
+        }
+        to{
+            opacity: 1;
+            transform:  translateX() scale(1.2);
+        }
+    }
+
+
+     .app-content {
+          flex: 1;
+       }              
+    .app ul {
+              margin-left: 50px;
+              padding: 0;
+               list-style: none;
+}
+
+.app ul li {
+          font-size: 18px;
+            padding: 6px 0;
+         color: #555;
+             border-bottom: 1px dashed #ddd;
+              animation: fade;
+            animation-timeline: view();
+             animation-range: entry 20% cover 40%;
+}
+   
+    #Atitle{
+         color: rgb(45, 45, 45);
+          text-align: start;
+          margin-left: 0;
+          margin-right: 0;
+          margin-bottom: 0;
+          width: 400px;
+
+          padding: 50px 200px 10px 46px;
+
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 800;
+         font-style: normal;
+         font-size: xx-large;   
+    }
+     #Atitle{
+         animation: fade;
+            animation-timeline: view();
+             animation-range: entry 20% cover 40%;
+     }
+    
+    @keyframes fade{
+
+            from{
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to{
+              opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+    .Aapply-btn {
+                   margin-left: 51px;
+                   padding: 8px 18px;
+                   font-size: 16px;
+                   font-weight: 600;
+                    color: #fff;
+                  background: rgb(244, 24, 40);     
+                   border: none;
+                 border-radius: 6px;
+                  transition: 0.3s;
+}
+
+.Aapply-btn:hover {
+                   background: rgb(17, 215, 106);
+
+                  transform: translateY(-2px);
+                  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+    
