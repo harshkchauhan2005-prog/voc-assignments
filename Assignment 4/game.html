@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Card Flip Game</title>
+<link rel="stylesheet" href="style.css">
+  
+  
+  
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Memory Card Flip Game</h1>
+    </nav>
+  </header>
+
+  <div class="app">
+    <aside class="panel">
+      
+
+      <div class="controls" aria-label="Game Settings">
+        <div>
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty" aria-label="Select difficulty">
+            <option value="easy">Easy — 4×4</option>
+            <option value="medium" selected>Medium — 5×4</option>
+            <option value="hard">Hard — 6×4</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="symbolSet">Theme</label>
+          <select id="symbolSet" aria-label="Select theme">
+            <option value="emoji" selected>Emoji</option>
+            <option value="shapes">Shapes</option>
+            <option value="animals">Animals</option>
+            <option value="food">Food</option>
+          </select>
+        </div>
+
+         <div class="row">
+          <button id="newGame" class="primary" title="Start a new game (R)">New Game</button>
+          <button id="resetBest" class="ghost" title="Clear best scores">Reset Best</button>
+        </div>
+
+        <div class="metrics" role="status" aria-live="polite">
+          <div class="metric">
+            <div class="label">Time</div>
+            <div id="time" class="value">00:00(coming soon)</div>
+          </div>
+          <div class="metric">
+            <div class="label">Moves</div>
+            <div id="moves" class="value">0(coming soon)</div>
+          </div>
+          <div class="metric">
+            <div class="label">Rating</div>
+            <div class="value stars" id="stars" aria-label="Rating">★ ★ ★(coming soon)</div>
+          </div>
+        </div>
+
+        <div class="best" id="bestBox">
+          <div><strong>Best (this difficulty):</strong></div>
+          <div id="bestTime">Time — —</div>
+          <div id="bestMoves">Moves — —</div>
+        </div>
+
+        <label class="toggle">Keyboard Mode(coming soon)
+          <input id="kbdToggle" type="checkbox" aria-label="Toggle keyboard control">
+        </label>
+        <div class="kbd">
+          Tips: Use <code>← ↑ ↓ →</code> to move, <code>Space</code>/<code>Enter</code> to flip. Press <code>R</code> to restart.
+        </div>
+      </div>
+    </aside>
+
+      <main class="panel board-wrap">
+      <div class="toast" id="toast" aria-live="polite" style="display:none;"></div>
+      <section id="board" class="board" aria-label="Game board" role="grid"></section>
+    </main>
+  </div>
+
+ 
+  <div class="modal" id="winModal" role="dialog" aria-modal="true" aria-labelledby="winTitle">
+    <div class="sheet">
+      <h2 id="winTitle">🎉 You Won!</h2>
+      <p id="winSubtitle">Great memory! Here are your stats:</p>
+      <div class="grid-stats">
+        <div class="pill"><div class="k">Time</div><div class="v" id="winTime">00:00</div></div>
+        <div class="pill"><div class="k">Moves</div><div class="v" id="winMoves">0</div></div>
+        <div class="pill"><div class="k">Rating</div><div class="v" id="winStars">★★★</div></div>
+      </div>
+      <div class="actions">
+        <button id="playAgain" class="primary">Play Again</button>
+        <button id="closeModal" class="ghost">Close</button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <script src="script.js"></script>
+</body>
+</html>
