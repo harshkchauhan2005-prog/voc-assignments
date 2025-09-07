@@ -22,6 +22,8 @@
  }
   html,body{
      height:100%;
+     width: 100%;
+      
      }
   body{
     margin: 0;
@@ -42,7 +44,8 @@
       align-items: center;
       justify-content: center;
       
-      background: url(layered-waves-haikei.svg);
+      /* background: url(layered-waves-haikei.svg); */
+      background: linear-gradient(90deg,rgba(31, 41, 55, 1) 0%, rgba(14, 165, 233, 1) 35%, rgba(17, 24, 39, 1) 100%);
       background-size: cover;
       padding: 25px 0;
       margin-bottom: 70px;
@@ -71,7 +74,7 @@
       animation: flip 2s infinite ease-in-out;
     }
         
-   /* Tablet */
+/* 
 @media (max-width: 768px) {
   nav {
     background-size: contain;  
@@ -79,35 +82,76 @@
     min-height: 80px;
     padding: 15px 0;
   }
-}
-/* @media (max-width: 480px) {
- .card .front svg {
-    display: none;
-  }
-
-  nav {
-    background: none;
-  }
 } */
-/* MOBILE: hide SVGs + svg images + object embeds and nav background */
-@media (max-width: 480px) {
-  /* inline SVGs and <img> SVGs inside cards */
-  .card .front svg,
-  .card .front img,
-  .card .front object {
-    display: none !important;
-    visibility: hidden !important;
-    width: 0 !important;
-    height: 0 !important;
-    pointer-events: none !important;
-  }
 
-  /* if the nav uses an SVG file as a CSS background */
-  nav {
-    background-image: none !important;
-    background: var(--bg) !important; /* or any fallback color */
-  }
+  @media (max-width: 900px) {
+    .app {
+        grid-template-columns: 1fr;
+    }
 }
+
+@media (max-width: 768px) {
+    nav {
+        background-size: contain;
+        background-position: top center;
+        min-height: 80px;
+        padding: 15px 0;
+        margin-bottom: 40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    :root {
+        --radius: 14px;
+        --gap: 10px;
+    }
+    html,body{
+       width:auto ;
+       height: auto;
+      
+    }
+
+    nav {
+        margin-bottom: 30px;
+        background: none;
+    }
+    
+    nav h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav h1::before {
+        font-size: 1.5rem;
+    }
+
+    .app {
+        width: min(1100px, 100% - 1.5rem);
+    }
+
+    .panel {
+        padding: 14px;
+    }
+
+    .row {
+        grid-template-columns: 1fr; /* Stack the row elements */
+    }
+    
+    .metrics {
+        grid-template-columns: 1fr; /* Stack metrics */
+        gap: 8px;
+    }
+    
+    .modal .sheet {
+        padding: 14px;
+    }
+    
+    .grid-stats {
+        grid-template-columns: 1fr; /* Stack stats in modal */
+        gap: 8px;
+    }
+}
+
 
 
 
