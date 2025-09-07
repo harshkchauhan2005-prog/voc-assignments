@@ -80,11 +80,32 @@
     padding: 15px 0;
   }
 }
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
+ .card .front svg {
+    display: none;
+  }
+
   nav {
-    background-size: cover;  
-    background-position: center top;
-    min-height: 70px;
+    background: none;
+  }
+} */
+/* MOBILE: hide SVGs + svg images + object embeds and nav background */
+@media (max-width: 480px) {
+  /* inline SVGs and <img> SVGs inside cards */
+  .card .front svg,
+  .card .front img,
+  .card .front object {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* if the nav uses an SVG file as a CSS background */
+  nav {
+    background-image: none !important;
+    background: var(--bg) !important; /* or any fallback color */
   }
 }
 
