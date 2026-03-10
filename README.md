@@ -1,4 +1,4 @@
-﻿# VOC ASSIGNMENTS
+﻿# VOC Assignment
  
 This repo contains my Vault of Code assignments.
 
